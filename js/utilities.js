@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", function(){
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function() {
 
 // history store
 const donationHistoryArray = [];
@@ -15,7 +17,7 @@ let donateBtns = document.querySelectorAll(".donateBtn");
 
 // toggle section 
 
-donateSectionBtn.addEventListener("click", () => {
+donateSectionBtn.addEventListener("click",  function() {
     donateSection.classList.remove("hidden");
     historySection.classList.add("hidden");
 
@@ -36,7 +38,7 @@ historySectionBtn.addEventListener("click", function() {
 
 // donation btns
 
-for ( let i = 0; i< donateBtns.length; i++ ) {
+for ( let i = 0; i < donateBtns.length; i++ ) {
     donateBtns[i].onclick = function (event) {
         event.preventDefault();
         
@@ -90,7 +92,7 @@ for ( let i = 0; i< donateBtns.length; i++ ) {
 };
 }
 
-function updateDonationHistory(){
+function updateDonationHistory() {
     donationHistoryTable.innerHTML = '';
     donationHistoryArray.forEach((donation, index)=> {
         donationHistoryTable.innerHTML += `
