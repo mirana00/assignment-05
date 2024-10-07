@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Question</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+<style>
+    .font{
+        font-family: "Lexend", sans-serif;
+    }
+</style>
+</head>
+<body class="font">
+    <header class="bg-yellow-50 lg:px-10 py-10 ">
+        <!-- navbar -->
+        
+        <div class="navbar bg-base-100 bg-yellow-50 sticky">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <a href="./index.html"><button class="btn btn-active hidden lg:block bg-green-400">Home</button></a>
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <div class="dropdown dropdown-end">
+                        <div tabindex="0" role="button" class="btn m-1 bg-green-300"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 24 24">
+                            <path d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 11 21 L 11 15 L 13 15 L 13 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z M 12 4.7910156 L 18 10.191406 L 18 11 L 18 19 L 15 19 L 15 13 L 9 13 L 9 19 L 6 19 L 6 10.191406 L 12 4.7910156 z"></path>
+                            </svg></div>
+                        <ul tabindex="0" class="dropdown-content menu left-0 bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                          <li>
+                            <a>
+                                <div class=" stats shadow">
+                                    <div class="stat flex">
+                                     <img src="../assets/coin.png" alt="">
+                                      <div id="mainBalance" class="text-xl">89,400</div>
+                                    </div>
+                                  </div>
+                              </a></li>
+                          <li>
+                            <a href="./index.html"><button class="btn btn-active p-4 lg:block bg-green-400">Home</button>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                </div>
+              
+            </div>
+            </div>
+            <!-- title -->
+            <div class="flex justify-between items-center gap-3 navbar-center" >
+                <img src="../assets/logo.png" alt="">
+                <h3 class="lg:text-xl lg:font-semibold">Donate to Help</h3>
+              </div>
+            <div class="navbar-end  ">
+                <div class=" stats shadow hidden lg:block">
+                    <div class="stat flex">
+                     <img src="../assets/coin.png" alt="">
+                      <div id="mainBalance" class="text-xl">89,400</div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        
+           </header>
+
+           <main class="pt-14 lg:p-20">
+           <div>
+            <div class="flex items-center gap-x-4 py-5">
+
+                <h1 class="font-bold text-3xl">Important FAQ </h1>
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/ask-question--v1.png" alt="ask-question--v1"/>
+    
+            </div>
+
+            <div>
+
+                <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the document object model (DOM)?</div>
+                    <div class="collapse-content">
+                      <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML document as a tree of objects, where each element is a node that can be accessed, modified, or deleted by JavaScript.</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                      <p>To select an element from the DOM, these methods can be used,
+
+                       1. document.getElementById()
+                       2. document.getElementsByClassName()
+                       3. document.getElementsByTagName()
+                       4. document.querySelector()
+                       5. document.querySelectorAll().</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                    <div class="collapse-content">
+                      <p>Event delegation is a technique in the DOM where you attach a single event listener to a parent element rather than individual child elements. The event listener captures events from child elements as they "bubble up" through the DOM. It’s useful because it saves memory by reducing the number of event listeners, and dynamically added elements are automatically handled.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                      <p>You can manipulate an element's attributes using the DOM with setAttribute() or by directly changing properties like element.src for images or element.href for links. For styles, you can use the style property, like element.style.color = 'red'; to change an element's color.</p>
+                    </div>
+                  </div>
+            </div>
+           </div>
+           </main>
+</body>
+</html>
