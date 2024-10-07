@@ -13,7 +13,7 @@ const donationHistoryTable = document.getElementById("donationHistory");
 let donateBtns = document.querySelectorAll(".donateBtn");
 
 
-// tpggle section 
+// toggle section 
 
 donateSectionBtn.addEventListener("click", () => {
     donateSection.classList.remove("hidden");
@@ -24,13 +24,14 @@ donateSectionBtn.addEventListener("click", () => {
     historySectionBtn.classList.add("bg-gray-300");
 });
 
-historySectionBtn.addEventListener("click", ()=> {
+historySectionBtn.addEventListener("click", function() {
         donateSection.classList.add("hidden");
          historySection.classList.remove("hidden");
 
          historySectionBtn.classList.add("bg-green-500");
          donateSectionBtn.classList.remove("bg-green-500");
          donateSectionBtn.classList.add("bg-gray-300");
+
 });
 
 // donation btns
@@ -47,10 +48,6 @@ for ( let i = 0; i< donateBtns.length; i++ ) {
 
         let inputDonation = parseFloat(inputDonationDiv.value);
         let accountBalance = parseFloat(document.getElementById('mainBalanceDesktop').innerText.replace(/,/g, ''));
-// console
-console.log('inputDonation:', inputDonation);
-        console.log('accountBalance:', accountBalance);
-        console.log('donationBalanceDiv:', donationBalanceDiv);
 
 
 
@@ -72,17 +69,20 @@ console.log('inputDonation:', inputDonation);
     
                
            
-            // donation historuy
+            // donation history
             donationHistoryArray.push({
                 cause: parentSection.querySelector('h1').innerText,
                 amount : inputDonation,
                 date : new Date().toLocaleString()
+
+                
             });
+
 
             // update table
             updateDonationHistory();
 
-            // mpdal
+            // modal
             document.getElementById('my_modal_5').showModal();
             inputDonationDiv.value = "";
 
@@ -102,21 +102,13 @@ function updateDonationHistory(){
      </tr>
   `;
 
-  donationHistoryTable.appendChild(donationHistoryTable);
+
     });
+
+
+
 }
 
 });
 
 
-// const newRow = document.createElement("tr");
-
-//                 // Insert columns (Number, Amount, Date)
-//                 newRow.innerHTML = `
-//                     <td>${index + 1}</td>
-//                     <td>$${donation.amount.toFixed(2)}</td>
-//                     <td>${donation.date}</td>
-//                 `;
-
-//                 // Append the row to the table body
-//                 donationHistoryTable.appendChild(newRow);
